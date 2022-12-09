@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <!-- Showcase -->
+  <section id="showcase">
+    <div class="container text-center">
+      <div class="home-search p-5">
+        <div class="overlay p-5">
+          <h1 class="display-4 mb-4">
+            Knowing Where You Live
+          </h1>
+          <p class="lead">Fill in the blanks below, and send out the form! <br/> Our Machine Learning algorithm will predict WHICH AREA your house lies in!</p>
+          <div class="search">
+            <form action="{% url 'search' %}">
+              <!-- Form Row 1 -->
+              <div class="form-row">
+                <div class="col-md-4 mb-3">
+                  <label class="sr-only">Quality</label>
+                  <select name="price" class="form-control">
+                    <option selected="true" disabled="disabled">Price to Sell (Any)</option>
+                    {% for key, value in Price_to_sell.items %}
+                        <option value="{{key}}">{{value}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                  <label class="sr-only">Quality</label>
+                  <select name="quality" class="form-control">
+                    <option selected="true" disabled="disabled">House Quality </option>
+                    {% for key, value in OverallQual.items %}
+                        <option value="{{value}}">{{key}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                  <label class="sr-only">Pool</label>
+                  <select name="pool" class="form-control">
+                    <option selected="true" disabled="disabled">Pool Area (Any)</option>
+                    {% for key, value in PoolArea.items %}
+                        <option value="{{value}}">{{key}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+              <!-- Form Row 2 -->
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label class="sr-only">LotArea</label>
+                  <select name="LotArea" class="form-control">
+                    <option selected="true" disabled="disabled">Lot Area (Square Feet)</option>
+                    {% for key, value in LotArea.items%}
+                     <option value="{{value}}">{{key}}</option>
+                    {% endfor%}
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="sr-only">basement</label>
+                  <select name="basement" class="form-control" id="type">
+                    <option selected="true" disabled="disabled">Basement Area (Square Feet)</option>
+                    {% for key,value in TotalBsmtSF.items %}
+                     <option value="{{value}}">{{key}}</option> 
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+              <button class="btn btn-secondary btn-block mt-4" type="submit">Submit form</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

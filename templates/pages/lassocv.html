@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+  <!-- Showcase -->
+  <section id="showcase">
+    <div class="container text-center">
+      <div class="home-search p-5">
+        <div class="overlay p-5">
+          <h1 class="display-4 mb-4">
+            Knowing the Value of your House
+          </h1>
+          <p class="lead">Fill in the blanks below, and send out the form! <br/> Our Machine Learning algorithm will predict the VALUE of your house!</p>
+          <div class="search">
+            <form action="{% url 'search' %}">
+              <!-- Form Row 1 -->
+              <div class="form-row">
+                <div class="col-md-4 mb-3">
+                  <label class="sr-only">TotalBsmtSF</label>
+                  <select name="TotalBsmtSF" class="form-control">
+                    <option selected="true" disabled="disabled">Basement Area (Square Feet)</option>
+                    {% for key, value in TotalBsmtSF.items %}
+                        <option value="{{value}}">{{key}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                  <label class="sr-only">OpenPorchSF</label>
+                  <select name="OpenPorchSF" class="form-control">
+                    <option selected="true" disabled="disabled">Open porch area (Square Feet)</option>
+                    {% for key, value in OpenPorchSF.items %}
+                        <option value="{{value}}">{{key}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+
+                <div class="col-md-4 mb-3">
+                  <label class="sr-only">GarageCars</label>
+                  <select name="GarageCars" class="form-control">
+                    <option selected="true" disabled="disabled">Size of Garage Cars Capacity </option>
+                    {% for key, value in GarageCars.items %}
+                        <option value="{{value}}">{{key}}</option>
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+              <!-- Form Row 2 -->
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label class="sr-only">PoolArea</label>
+                  <select name="PoolArea" class="form-control">
+                    <option selected="true" disabled="disabled">Pool Area (Square Feet)</option>
+                    {% for key, value in PoolArea.items%}
+                     <option value="{{value}}">{{key}}</option>
+                    {% endfor%}
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label class="sr-only">OverallQual</label>
+                  <select name="OverallQual" class="form-control" id="type">
+                    <option selected="true" disabled="disabled">House Quality </option>
+                    {% for key,value in OverallQual.items %}
+                     <option value="{{value}}">{{key}}</option> 
+                    {% endfor %}
+                  </select>
+                </div>
+              </div>
+              <button class="btn btn-secondary btn-block mt-4" type="submit">Submit form</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
