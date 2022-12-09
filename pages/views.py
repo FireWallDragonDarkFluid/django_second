@@ -76,7 +76,23 @@ def search(request):
             TotalBsmtSF = request.GET['basement']
         tmp = {'LotArea': LotArea, 'PoolArea': PoolArea, 'TotalBsmtSF': TotalBsmtSF, 'OverallQual': OverallQual, 'SalePrice': SalePrice}
         response = pd.DataFrame(data=tmp, index=[0])
-        preds = model.predict(response)
+        preds = model.predict(response)[0]
+        if preds == 0:
+            preds = 'Agriculture'
+        elif preds == 1:
+            preds = 'Commercial'
+        elif preds == 2:
+            preds = 'Floating Village Residential' 
+        elif preds == 3:
+            preds = 'Industrial'
+        elif preds == 4:
+            preds = 'Residential High Density'
+        elif preds == 5:
+            preds = 'Residential Low Density'
+        elif preds == 6:
+            preds = 'Residential Low Density Park'
+        elif preds == 7:
+            preds = 'Residential Medium Density'
         context = {
             'type':'KMeans', 
             'preds': preds
@@ -115,7 +131,23 @@ def search(request):
         ### Predict
         receive_msg = {'LotArea': LotArea, 'PoolArea': PoolArea, 'TotalBsmtSF': TotalBsmtSF, 'OverallQual': OverallQual, 'SalePrice': SalePrice}
         msg_transformed = pd.DataFrame(data=receive_msg, index=[0])
-        preds = model.predict(msg_transformed)
+        preds = model.predict(msg_transformed)[0]
+        if preds == 'A':
+            preds = 'Agriculture'
+        elif preds == 'C':
+            preds = 'Commercial'
+        elif preds == 'FV':
+            preds = 'Floating Village Residential' 
+        elif preds == 'I':
+            preds = 'Industrial'
+        elif preds == 'RH':
+            preds = 'Residential High Density'
+        elif preds == 'RL':
+            preds = 'Residential Low Density'
+        elif preds == 'RP':
+            preds = 'Residential Low Density Park'
+        elif preds == 'RM':
+            preds = 'Residential Medium Density'
         context = {
             'type':'forest',
             'preds': preds
@@ -157,8 +189,11 @@ def search(request):
         ### Predict
         receive_msg = {'TotalBsmtSF': TotalBsmtSF, 'OpenPorchSF': OpenPorchSF, 'GarageCars': GarageCars, 'PoolArea': PoolArea, 'OverallQual': OverallQual}
         msg_transformed = pd.DataFrame(data=receive_msg, index=[0])
-        preds = model.predict(msg_transformed)
-        preds = str(int(np.expm1(preds)[0])//1000) + ',' + str(int(np.expm1(preds)[0])%1000)
+        preds = model.predict(msg_transformed) 
+        if len(str(int(np.expm1(preds)[0]))) > 6:
+            preds = str(int(np.expm1(preds)[0])//1000000) + ',' +  str((int(np.expm1(preds)[0])-1000000) //1000) + ',' + str(int(np.expm1(preds)[0])%1000)
+        else:
+            preds = str(int(np.expm1(preds)[0])//1000) + ',' + str(int(np.expm1(preds)[0])%1000)
         context = {
             'type':'lassocv',
             'preds':'$ '+preds
