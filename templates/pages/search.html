@@ -26,15 +26,18 @@
     </div>
   </section>
 
+  <!-- Predict Price -->
+  {% if type == 'lassocv' %} 
   <!-- Listings -->
   <section id="listings" class="py-4">
     <div class="container">
       <div class="row">
 
+        {% if number_preds < 50000 %}
         <!-- Listing 1 -->
         <div class="col-md-6 col-lg-4 mb-4">
           <div class="card listing-preview">
-            <img class="card-img-top" src="{% static 'img/homes/home-1.jpg' %}" alt="">
+            <img class="card-img-top" src="{% static 'img/results/1/1_1.jpg' %}" alt="">
             <div class="card-img-overlay">
               <h2>
                 <span class="badge badge-secondary text-white">$490,000</span>
@@ -42,9 +45,9 @@
             </div>
             <div class="card-body">
               <div class="listing-heading text-center">
-                <h4 class="text-primary">45 Drivewood Circle</h4>
+                <h4 class="text-primary"></h4>
                 <p>
-                  <i class="fas fa-map-marker text-secondary"></i> Norwood MA, 02062</p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
               </div>
               <hr>
               <div class="row py-2 text-secondary">
@@ -66,7 +69,7 @@
         <!-- Listing 2 -->
         <div class="col-md-6 col-lg-4 mb-4">
           <div class="card listing-preview">
-            <img class="card-img-top" src="{% static 'img/homes/home-2.jpg' %}" alt="">
+            <img class="card-img-top" src="{% static 'img/results/1/1_2.jpg' %}" alt="">
             <div class="card-img-overlay">
               <h2>
                 <span class="badge badge-secondary text-white">$550,000</span>
@@ -74,9 +77,9 @@
             </div>
             <div class="card-body">
               <div class="listing-heading text-center">
-                <h4 class="text-primary">18 Jefferson Lane</h4>
+                <h4 class="text-primary"></h4>
                 <p>
-                  <i class="fas fa-map-marker text-secondary"></i> Woburn MA, 01801</p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
               </div>
               <hr>
               <div class="row py-2 text-secondary">
@@ -98,7 +101,7 @@
         <!-- Listing 3 -->
         <div class="col-md-6 col-lg-4 mb-4">
           <div class="card listing-preview">
-            <img class="card-img-top" src="{% static 'img/homes/home-3.jpg' %}" alt="">
+            <img class="card-img-top" src="{% static 'img/results/1/1_3.jpg' %}" alt="">
             <div class="card-img-overlay">
               <h2>
                 <span class="badge badge-secondary text-white">$580,000</span>
@@ -106,9 +109,9 @@
             </div>
             <div class="card-body">
               <div class="listing-heading text-center">
-                <h4 class="text-primary">187 Woodrow Street</h4>
+                <h4 class="text-primary"></h4>
                 <p>
-                  <i class="fas fa-map-marker text-secondary"></i> Salem MA, 01915</p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
               </div>
               <hr>
               <div class="row py-2 text-secondary">
@@ -126,7 +129,2042 @@
             </div>
           </div>
         </div>
+        {% elif number_preds < 100000 %} 
+        <!-- Listing 1 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/2/2_1.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$490,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 2</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 2 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/2/2_2.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$550,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 1</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 3 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/2/2_3.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$580,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 0</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% elif number_preds < 150000 %} 
+        <!-- Listing 1 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/3/3_1.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$490,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 2</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 2 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/3/3_2.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$550,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 1</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 3 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/3/3_3.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$580,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 0</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% elif  number_preds < 200000 %} 
+        <!-- Listing 1 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/4/4_1.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$490,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 2</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 2 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/4/4_2.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$550,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 1</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 3 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/4/4_3.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$580,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 0</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% elif  number_preds < 250000 %} 
+        <!-- Listing 1 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/5/5_1.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$490,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 2</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 2 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/5/5_2.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$550,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 1</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 3 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/5/5_3.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$580,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 0</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% elif  number_preds < 300000 %} 
+        <!-- Listing 1 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/6/6_1.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$490,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 2</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 2 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/6/6_2.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$550,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 1</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 3 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/6/6_3.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$580,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 0</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% elif  number_preds < 350000 %}           
+        <!-- Listing 1 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/7/7_1.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$490,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 2</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 2 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/7/7_2.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$550,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 1</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 3 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/7/7_3.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$580,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 0</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% elif  number_preds < 400000 %} 
+        <!-- Listing 1 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/8/8_1.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$490,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 2</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 2 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/8/8_2.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$550,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 1</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 3 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/8/8_3.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$580,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 0</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% elif  number_preds < 450000 %} 
+        <!-- Listing 1 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/9/9_1.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$490,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 2</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 2 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/9/9_2.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$550,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 1</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 3 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/9/9_3.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$580,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 0</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% elif  number_preds < 500000 %} 
+        <!-- Listing 1 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/10/10_1.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$490,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 2</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 2 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/10/10_2.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$550,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 1</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 3 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/10/10_3.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$580,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 0</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% elif number_preds < 550000 %}       
+        <!-- Listing 1 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/11/11_1.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$490,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 2</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 2 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/11/11_2.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$550,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 1</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 3 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/11/11_3.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$580,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 0</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% elif  number_preds < 600000 %} 
+        <!-- Listing 1 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/12/12_1.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$490,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 2</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 2 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/12/12_2.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$550,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 1</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 3 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/12/12_3.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$580,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 0</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% elif  number_preds < 650000 %} 
+        <!-- Listing 1 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/13/13_1.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$490,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 2</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 2 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/13/13_2.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$550,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 1</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 3 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/13/13_3.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$580,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 0</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {% else %} 
+        <!-- Listing 1 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/14/14_1.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$490,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 2</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 2 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/14/14_2.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$550,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 1</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Listing 3 -->
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card listing-preview">
+            <img class="card-img-top" src="{% static 'img/results/14/14_3.jpg' %}" alt="">
+            <div class="card-img-overlay">
+              <h2>
+                <span class="badge badge-secondary text-white">$580,000</span>
+              </h2>
+            </div>
+            <div class="card-body">
+              <div class="listing-heading text-center">
+                <h4 class="text-primary"></h4>
+                <p>
+                  <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+              </div>
+              <hr>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                <div class="col-6">
+                  <i class="fas fa-car"></i> Garage: 0</div>
+              </div>
+              <div class="row py-2 text-secondary">
+                <div class="col-6">
+                  <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                <div class="col-6">
+                  <i class="fas fa-bath"></i> Bathrooms: 3</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif %}
       </div>
     </div>
   </section>
+{% else %} 
+<section id="listings" class="py-4">
+  <div class="container">
+    <div class="row">
+      {% if preds == 'Agriculture' %}
+              <!-- Listing 1 -->
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card listing-preview">
+                  <img class="card-img-top" src="{% static 'img/results/Agriculture/agriculture_1.jpg' %}" alt="">
+                  <div class="card-img-overlay">
+                    <h2>
+                      <span class="badge badge-secondary text-white">$490,000</span>
+                    </h2>
+                  </div>
+                  <div class="card-body">
+                    <div class="listing-heading text-center">
+                      <h4 class="text-primary"></h4>
+                      <p>
+                        <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                    </div>
+                    <hr>
+                    <div class="row py-2 text-secondary">
+                      <div class="col-6">
+                        <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                      <div class="col-6">
+                        <i class="fas fa-car"></i> Garage: 2</div>
+                    </div>
+                    <div class="row py-2 text-secondary">
+                      <div class="col-6">
+                        <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                      <div class="col-6">
+                        <i class="fas fa-bath"></i> Bathrooms: 2</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Listing 2 -->
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card listing-preview">
+                  <img class="card-img-top" src="{% static 'img/results/Agriculture/agriculture_2.jpg' %}" alt="">
+                  <div class="card-img-overlay">
+                    <h2>
+                      <span class="badge badge-secondary text-white">$550,000</span>
+                    </h2>
+                  </div>
+                  <div class="card-body">
+                    <div class="listing-heading text-center">
+                      <h4 class="text-primary"></h4>
+                      <p>
+                        <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                    </div>
+                    <hr>
+                    <div class="row py-2 text-secondary">
+                      <div class="col-6">
+                        <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                      <div class="col-6">
+                        <i class="fas fa-car"></i> Garage: 1</div>
+                    </div>
+                    <div class="row py-2 text-secondary">
+                      <div class="col-6">
+                        <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                      <div class="col-6">
+                        <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Listing 3 -->
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card listing-preview">
+                  <img class="card-img-top" src="{% static 'img/results/Agriculture/agriculture_3.jpg' %}" alt="">
+                  <div class="card-img-overlay">
+                    <h2>
+                      <span class="badge badge-secondary text-white">$580,000</span>
+                    </h2>
+                  </div>
+                  <div class="card-body">
+                    <div class="listing-heading text-center">
+                      <h4 class="text-primary"></h4>
+                      <p>
+                        <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                    </div>
+                    <hr>
+                    <div class="row py-2 text-secondary">
+                      <div class="col-6">
+                        <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                      <div class="col-6">
+                        <i class="fas fa-car"></i> Garage: 0</div>
+                    </div>
+                    <div class="row py-2 text-secondary">
+                      <div class="col-6">
+                        <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                      <div class="col-6">
+                        <i class="fas fa-bath"></i> Bathrooms: 3</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      {% elif preds == 'Commercial' %} 
+              <!-- Listing 1 -->
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card listing-preview">
+                  <img class="card-img-top" src="{% static 'img/results/Commercial/comm_1.jpg' %}" alt="">
+                  <div class="card-img-overlay">
+                    <h2>
+                      <span class="badge badge-secondary text-white">$490,000</span>
+                    </h2>
+                  </div>
+                  <div class="card-body">
+                    <div class="listing-heading text-center">
+                      <h4 class="text-primary"></h4>
+                      <p>
+                        <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                    </div>
+                    <hr>
+                    <div class="row py-2 text-secondary">
+                      <div class="col-6">
+                        <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                      <div class="col-6">
+                        <i class="fas fa-car"></i> Garage: 2</div>
+                    </div>
+                    <div class="row py-2 text-secondary">
+                      <div class="col-6">
+                        <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                      <div class="col-6">
+                        <i class="fas fa-bath"></i> Bathrooms: 2</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Listing 2 -->
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card listing-preview">
+                  <img class="card-img-top" src="{% static 'img/results/Commercial/comm_2.jpg' %}" alt="">
+                  <div class="card-img-overlay">
+                    <h2>
+                      <span class="badge badge-secondary text-white">$550,000</span>
+                    </h2>
+                  </div>
+                  <div class="card-body">
+                    <div class="listing-heading text-center">
+                      <h4 class="text-primary"></h4>
+                      <p>
+                        <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                    </div>
+                    <hr>
+                    <div class="row py-2 text-secondary">
+                      <div class="col-6">
+                        <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                      <div class="col-6">
+                        <i class="fas fa-car"></i> Garage: 1</div>
+                    </div>
+                    <div class="row py-2 text-secondary">
+                      <div class="col-6">
+                        <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                      <div class="col-6">
+                        <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Listing 3 -->
+              <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card listing-preview">
+                  <img class="card-img-top" src="{% static 'img/results/Commercial/comm_3.jpg' %}" alt="">
+                  <div class="card-img-overlay">
+                    <h2>
+                      <span class="badge badge-secondary text-white">$580,000</span>
+                    </h2>
+                  </div>
+                  <div class="card-body">
+                    <div class="listing-heading text-center">
+                      <h4 class="text-primary"></h4>
+                      <p>
+                        <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                    </div>
+                    <hr>
+                    <div class="row py-2 text-secondary">
+                      <div class="col-6">
+                        <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                      <div class="col-6">
+                        <i class="fas fa-car"></i> Garage: 0</div>
+                    </div>
+                    <div class="row py-2 text-secondary">
+                      <div class="col-6">
+                        <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                      <div class="col-6">
+                        <i class="fas fa-bath"></i> Bathrooms: 3</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      {% elif preds == 'Floating Village Residential' %} 
+                    <!-- Listing 1 -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                      <div class="card listing-preview">
+                        <img class="card-img-top" src="{% static 'img/results/Floating Village Residential/F_1.jpg' %}" alt="">
+                        <div class="card-img-overlay">
+                          <h2>
+                            <span class="badge badge-secondary text-white">$490,000</span>
+                          </h2>
+                        </div>
+                        <div class="card-body">
+                          <div class="listing-heading text-center">
+                            <h4 class="text-primary"></h4>
+                            <p>
+                              <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                          </div>
+                          <hr>
+                          <div class="row py-2 text-secondary">
+                            <div class="col-6">
+                              <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                            <div class="col-6">
+                              <i class="fas fa-car"></i> Garage: 2</div>
+                          </div>
+                          <div class="row py-2 text-secondary">
+                            <div class="col-6">
+                              <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                            <div class="col-6">
+                              <i class="fas fa-bath"></i> Bathrooms: 2</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            
+                    <!-- Listing 2 -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                      <div class="card listing-preview">
+                        <img class="card-img-top" src="{% static 'img/results/Floating Village Residential/F_2.jpg' %}" alt="">
+                        <div class="card-img-overlay">
+                          <h2>
+                            <span class="badge badge-secondary text-white">$550,000</span>
+                          </h2>
+                        </div>
+                        <div class="card-body">
+                          <div class="listing-heading text-center">
+                            <h4 class="text-primary"></h4>
+                            <p>
+                              <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                          </div>
+                          <hr>
+                          <div class="row py-2 text-secondary">
+                            <div class="col-6">
+                              <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                            <div class="col-6">
+                              <i class="fas fa-car"></i> Garage: 1</div>
+                          </div>
+                          <div class="row py-2 text-secondary">
+                            <div class="col-6">
+                              <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                            <div class="col-6">
+                              <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            
+                    <!-- Listing 3 -->
+                    <div class="col-md-6 col-lg-4 mb-4">
+                      <div class="card listing-preview">
+                        <img class="card-img-top" src="{% static 'img/results/Floating Village Residential/F_3.jpg' %}" alt="">
+                        <div class="card-img-overlay">
+                          <h2>
+                            <span class="badge badge-secondary text-white">$580,000</span>
+                          </h2>
+                        </div>
+                        <div class="card-body">
+                          <div class="listing-heading text-center">
+                            <h4 class="text-primary"></h4>
+                            <p>
+                              <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                          </div>
+                          <hr>
+                          <div class="row py-2 text-secondary">
+                            <div class="col-6">
+                              <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                            <div class="col-6">
+                              <i class="fas fa-car"></i> Garage: 0</div>
+                          </div>
+                          <div class="row py-2 text-secondary">
+                            <div class="col-6">
+                              <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                            <div class="col-6">
+                              <i class="fas fa-bath"></i> Bathrooms: 3</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+      {% elif preds == 'Industrial' %} 
+                          <!-- Listing 1 -->
+                          <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card listing-preview">
+                              <img class="card-img-top" src="{% static 'img/results/Industrial/ind_1.jpg' %}" alt="">
+                              <div class="card-img-overlay">
+                                <h2>
+                                  <span class="badge badge-secondary text-white">$490,000</span>
+                                </h2>
+                              </div>
+                              <div class="card-body">
+                                <div class="listing-heading text-center">
+                                  <h4 class="text-primary"></h4>
+                                  <p>
+                                    <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                                </div>
+                                <hr>
+                                <div class="row py-2 text-secondary">
+                                  <div class="col-6">
+                                    <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                                  <div class="col-6">
+                                    <i class="fas fa-car"></i> Garage: 2</div>
+                                </div>
+                                <div class="row py-2 text-secondary">
+                                  <div class="col-6">
+                                    <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                                  <div class="col-6">
+                                    <i class="fas fa-bath"></i> Bathrooms: 2</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  
+                          <!-- Listing 2 -->
+                          <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card listing-preview">
+                              <img class="card-img-top" src="{% static 'img/results/Industrial/ind_2.jpg' %}" alt="">
+                              <div class="card-img-overlay">
+                                <h2>
+                                  <span class="badge badge-secondary text-white">$550,000</span>
+                                </h2>
+                              </div>
+                              <div class="card-body">
+                                <div class="listing-heading text-center">
+                                  <h4 class="text-primary"></h4>
+                                  <p>
+                                    <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                                </div>
+                                <hr>
+                                <div class="row py-2 text-secondary">
+                                  <div class="col-6">
+                                    <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                                  <div class="col-6">
+                                    <i class="fas fa-car"></i> Garage: 1</div>
+                                </div>
+                                <div class="row py-2 text-secondary">
+                                  <div class="col-6">
+                                    <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                                  <div class="col-6">
+                                    <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                  
+                          <!-- Listing 3 -->
+                          <div class="col-md-6 col-lg-4 mb-4">
+                            <div class="card listing-preview">
+                              <img class="card-img-top" src="{% static 'img/results/Industrial/ind_3.jpg' %}" alt="">
+                              <div class="card-img-overlay">
+                                <h2>
+                                  <span class="badge badge-secondary text-white">$580,000</span>
+                                </h2>
+                              </div>
+                              <div class="card-body">
+                                <div class="listing-heading text-center">
+                                  <h4 class="text-primary"></h4>
+                                  <p>
+                                    <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                                </div>
+                                <hr>
+                                <div class="row py-2 text-secondary">
+                                  <div class="col-6">
+                                    <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                                  <div class="col-6">
+                                    <i class="fas fa-car"></i> Garage: 0</div>
+                                </div>
+                                <div class="row py-2 text-secondary">
+                                  <div class="col-6">
+                                    <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                                  <div class="col-6">
+                                    <i class="fas fa-bath"></i> Bathrooms: 3</div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+      {% elif preds == 'Residential High Density' %} 
+                                <!-- Listing 1 -->
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                  <div class="card listing-preview">
+                                    <img class="card-img-top" src="{% static 'img/results/Residential High Density/RHD_1.jpg' %}" alt="">
+                                    <div class="card-img-overlay">
+                                      <h2>
+                                        <span class="badge badge-secondary text-white">$490,000</span>
+                                      </h2>
+                                    </div>
+                                    <div class="card-body">
+                                      <div class="listing-heading text-center">
+                                        <h4 class="text-primary"></h4>
+                                        <p>
+                                          <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                                      </div>
+                                      <hr>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-car"></i> Garage: 2</div>
+                                      </div>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-bath"></i> Bathrooms: 2</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        
+                                <!-- Listing 2 -->
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                  <div class="card listing-preview">
+                                    <img class="card-img-top" src="{% static 'img/results/Residential High Density/RHD_2.jpg' %}" alt="">
+                                    <div class="card-img-overlay">
+                                      <h2>
+                                        <span class="badge badge-secondary text-white">$550,000</span>
+                                      </h2>
+                                    </div>
+                                    <div class="card-body">
+                                      <div class="listing-heading text-center">
+                                        <h4 class="text-primary"></h4>
+                                        <p>
+                                          <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                                      </div>
+                                      <hr>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-car"></i> Garage: 1</div>
+                                      </div>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        
+                                <!-- Listing 3 -->
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                  <div class="card listing-preview">
+                                    <img class="card-img-top" src="{% static 'img/results/Residential High Density/RHD_3.jpg' %}" alt="">
+                                    <div class="card-img-overlay">
+                                      <h2>
+                                        <span class="badge badge-secondary text-white">$580,000</span>
+                                      </h2>
+                                    </div>
+                                    <div class="card-body">
+                                      <div class="listing-heading text-center">
+                                        <h4 class="text-primary"></h4>
+                                        <p>
+                                          <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                                      </div>
+                                      <hr>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-car"></i> Garage: 0</div>
+                                      </div>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-bath"></i> Bathrooms: 3</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+      {% elif preds == 'Residential Low Density' %} 
+                                <!-- Listing 1 -->
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                  <div class="card listing-preview">
+                                    <img class="card-img-top" src="{% static 'img/results/Residential Low Density/RLD_1.jpg' %}" alt="">
+                                    <div class="card-img-overlay">
+                                      <h2>
+                                        <span class="badge badge-secondary text-white">$490,000</span>
+                                      </h2>
+                                    </div>
+                                    <div class="card-body">
+                                      <div class="listing-heading text-center">
+                                        <h4 class="text-primary"></h4>
+                                        <p>
+                                          <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                                      </div>
+                                      <hr>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-car"></i> Garage: 2</div>
+                                      </div>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-bath"></i> Bathrooms: 2</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        
+                                <!-- Listing 2 -->
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                  <div class="card listing-preview">
+                                    <img class="card-img-top" src="{% static 'img/results/Residential Low Density/RLD_2.jpg' %}" alt="">
+                                    <div class="card-img-overlay">
+                                      <h2>
+                                        <span class="badge badge-secondary text-white">$550,000</span>
+                                      </h2>
+                                    </div>
+                                    <div class="card-body">
+                                      <div class="listing-heading text-center">
+                                        <h4 class="text-primary"></h4>
+                                        <p>
+                                          <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                                      </div>
+                                      <hr>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-car"></i> Garage: 1</div>
+                                      </div>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        
+                                <!-- Listing 3 -->
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                  <div class="card listing-preview">
+                                    <img class="card-img-top" src="{% static 'img/results/Residential Low Density/RLD_3.jpg' %}" alt="">
+                                    <div class="card-img-overlay">
+                                      <h2>
+                                        <span class="badge badge-secondary text-white">$580,000</span>
+                                      </h2>
+                                    </div>
+                                    <div class="card-body">
+                                      <div class="listing-heading text-center">
+                                        <h4 class="text-primary"></h4>
+                                        <p>
+                                          <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                                      </div>
+                                      <hr>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-car"></i> Garage: 0</div>
+                                      </div>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-bath"></i> Bathrooms: 3</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+      {% elif preds == 'Residential Low Density Park' %} 
+                                <!-- Listing 1 -->
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                  <div class="card listing-preview">
+                                    <img class="card-img-top" src="{% static 'img/results/Residential Low Density Park/RLDP_1.jpg' %}" alt="">
+                                    <div class="card-img-overlay">
+                                      <h2>
+                                        <span class="badge badge-secondary text-white">$490,000</span>
+                                      </h2>
+                                    </div>
+                                    <div class="card-body">
+                                      <div class="listing-heading text-center">
+                                        <h4 class="text-primary"></h4>
+                                        <p>
+                                          <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                                      </div>
+                                      <hr>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-car"></i> Garage: 2</div>
+                                      </div>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-bath"></i> Bathrooms: 2</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        
+                                <!-- Listing 2 -->
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                  <div class="card listing-preview">
+                                    <img class="card-img-top" src="{% static 'img/results/Residential Low Density Park/RLDP_2.jpg' %}" alt="">
+                                    <div class="card-img-overlay">
+                                      <h2>
+                                        <span class="badge badge-secondary text-white">$550,000</span>
+                                      </h2>
+                                    </div>
+                                    <div class="card-body">
+                                      <div class="listing-heading text-center">
+                                        <h4 class="text-primary"></h4>
+                                        <p>
+                                          <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                                      </div>
+                                      <hr>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-car"></i> Garage: 1</div>
+                                      </div>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        
+                                <!-- Listing 3 -->
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                  <div class="card listing-preview">
+                                    <img class="card-img-top" src="{% static 'img/results/Residential Low Density Park/RLDP_3.jpg' %}" alt="">
+                                    <div class="card-img-overlay">
+                                      <h2>
+                                        <span class="badge badge-secondary text-white">$580,000</span>
+                                      </h2>
+                                    </div>
+                                    <div class="card-body">
+                                      <div class="listing-heading text-center">
+                                        <h4 class="text-primary"></h4>
+                                        <p>
+                                          <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                                      </div>
+                                      <hr>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-car"></i> Garage: 0</div>
+                                      </div>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-bath"></i> Bathrooms: 3</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+      {% else %} 
+                                <!-- Listing 1 -->
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                  <div class="card listing-preview">
+                                    <img class="card-img-top" src="{% static 'img/results/Residential Medium Density/RMD_1.jpg' %}" alt="">
+                                    <div class="card-img-overlay">
+                                      <h2>
+                                        <span class="badge badge-secondary text-white">$490,000</span>
+                                      </h2>
+                                    </div>
+                                    <div class="card-body">
+                                      <div class="listing-heading text-center">
+                                        <h4 class="text-primary"></h4>
+                                        <p>
+                                          <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                                      </div>
+                                      <hr>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-car"></i> Garage: 2</div>
+                                      </div>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-bed"></i> Bedrooms: 3</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-bath"></i> Bathrooms: 2</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        
+                                <!-- Listing 2 -->
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                  <div class="card listing-preview">
+                                    <img class="card-img-top" src="{% static 'img/results/Residential Medium Density/RMD_2.jpg' %}" alt="">
+                                    <div class="card-img-overlay">
+                                      <h2>
+                                        <span class="badge badge-secondary text-white">$550,000</span>
+                                      </h2>
+                                    </div>
+                                    <div class="card-body">
+                                      <div class="listing-heading text-center">
+                                        <h4 class="text-primary"></h4>
+                                        <p>
+                                          <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                                      </div>
+                                      <hr>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-th-large"></i> Sqft: 3200</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-car"></i> Garage: 1</div>
+                                      </div>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-bath"></i> Bathrooms: 2.5</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                        
+                                <!-- Listing 3 -->
+                                <div class="col-md-6 col-lg-4 mb-4">
+                                  <div class="card listing-preview">
+                                    <img class="card-img-top" src="{% static 'img/results/Residential Medium Density/RMD_3.jpg' %}" alt="">
+                                    <div class="card-img-overlay">
+                                      <h2>
+                                        <span class="badge badge-secondary text-white">$580,000</span>
+                                      </h2>
+                                    </div>
+                                    <div class="card-body">
+                                      <div class="listing-heading text-center">
+                                        <h4 class="text-primary"></h4>
+                                        <p>
+                                          <i class="fas fa-map-marker text-secondary"></i> House Information</p>
+                                      </div>
+                                      <hr>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-th-large"></i> Sqft: 3107</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-car"></i> Garage: 0</div>
+                                      </div>
+                                      <div class="row py-2 text-secondary">
+                                        <div class="col-6">
+                                          <i class="fas fa-bed"></i> Bedrooms: 4</div>
+                                        <div class="col-6">
+                                          <i class="fas fa-bath"></i> Bathrooms: 3</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+      {% endif %}
+</div>
+</div>
+</section>
+{% endif %}
 {% endblock %}

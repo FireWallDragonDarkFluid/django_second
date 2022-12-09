@@ -190,13 +190,15 @@ def search(request):
         receive_msg = {'TotalBsmtSF': TotalBsmtSF, 'OpenPorchSF': OpenPorchSF, 'GarageCars': GarageCars, 'PoolArea': PoolArea, 'OverallQual': OverallQual}
         msg_transformed = pd.DataFrame(data=receive_msg, index=[0])
         preds = model.predict(msg_transformed) 
+        number_preds = int(np.expm1(preds))
         if len(str(int(np.expm1(preds)[0]))) > 6:
             preds = str(int(np.expm1(preds)[0])//1000000) + ',' +  str((int(np.expm1(preds)[0])-1000000) //1000) + ',' + str(int(np.expm1(preds)[0])%1000)
         else:
             preds = str(int(np.expm1(preds)[0])//1000) + ',' + str(int(np.expm1(preds)[0])%1000)
         context = {
             'type':'lassocv',
-            'preds':'$ '+preds
+            'preds':'$ '+preds,
+            'number_preds': number_preds
         }
         print(preds)
         ########################
